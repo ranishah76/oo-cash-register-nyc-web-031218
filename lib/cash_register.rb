@@ -17,7 +17,7 @@ def add_item(title, price, quantity = 1)
   quantity.times do
   @items << title
 end
-  self.last_total = total
+  @last_total = @total
 end
 
 def apply_discount
@@ -30,7 +30,7 @@ if @discount > 0
 end
 
 def void_last_transaction
-  self.total = self.total - self.last_total
-end 
+  @total = @total - @last_total
+end
 
 end
