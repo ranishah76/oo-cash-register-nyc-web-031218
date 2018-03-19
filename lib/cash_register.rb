@@ -30,6 +30,7 @@ if @discount > 0
 end
 
 def void_last_transaction
-
+  self.total = self.total - self.last_total
+end 
 
 end
