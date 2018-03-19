@@ -7,6 +7,7 @@ def initialize(discount = 0)
   @price = price
   @discount = discount
   @total = 0
+  @items = []
 end
 
 def total
@@ -15,6 +16,7 @@ end
 
 def add_item(title, price, quantity = 1)
   @total += price*quantity
+  @items << self
 end
 
 def apply_discount
@@ -26,4 +28,4 @@ if @discount > 0
   end
 end
 
-end 
+end
